@@ -15,7 +15,7 @@ function Blog() {
       <h2>My Blog Posts</h2>
       {posts.map((item, index) => (
         <div key={index}>
-          <link to={`/blog/${item.id}`}> {item.title}</link>
+          <Link to={`/blog/${item.id}`}>- {item.title}</Link>
         </div>
       ))}
     </>

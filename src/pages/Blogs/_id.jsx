@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 
 function SinglePost() {
   const params = useParams();
-  const [post, setPosts] = useState("");
+  const [post, setPosts] = useState(null);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/todos/${params.id}`)
       .then((response) => response.json())
       .then((json) => setPosts(json));
-  });
+  }, []);
 
   return (
     <>
