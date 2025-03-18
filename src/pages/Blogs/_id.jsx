@@ -6,10 +6,10 @@ function SinglePost() {
   const [post, setPosts] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${params.id}`)
+    fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
       .then((response) => response.json())
       .then((json) => setPosts(json));
-  }, []);
+  });
 
   return (
     <>
